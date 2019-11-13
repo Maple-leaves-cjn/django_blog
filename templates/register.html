@@ -124,7 +124,6 @@
     });
 
     // 给username input框绑定一个失去焦点的事件，失去焦点之后就校验用户名是否已被注册
-    {#$("#id_username").blur(function () {#}
     $("#id_username").on("input", function () {
         // 取到用户填写的值
         var username = $(this).val();

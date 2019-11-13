@@ -202,8 +202,6 @@ def home(request, username, *args):
         logger.debug(args)
         logger.debug("------------------------------")
         # 表示按照文章的分类或tag或日期归档来查询
-        # args = ("category", "技术")
-        # article_list = models.Article.objects.filter(user=user).filter(category__title="技术")
         if args[0] == "category":
             article_list = models.Article.objects.filter(user=user).filter(category__title=args[1])
         elif args[0] == "tag":
